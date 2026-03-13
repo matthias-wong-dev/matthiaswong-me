@@ -86,42 +86,37 @@
 
   .byline-sep { margin: 0 8px; opacity: 0.4; }
 
-  /* Interest table */
-  .interest-table {
-    width: 100%;
-    border-collapse: collapse;
+  /* Interest grid */
+  .interest-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     animation: fadeUp 0.7s 0.2s ease both;
   }
 
-  .interest-table tr {
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .interest-table tr:first-child {
-    border-top: 1px solid var(--rule);
-  }
-
-  .interest-table td {
-    padding: 13px 0;
-    vertical-align: baseline;
-  }
-
-  .interest-table td:first-child {
+  .interest-col-head {
     font-family: 'Jost', sans-serif;
-    font-size: 0.65em;
+    font-size: 0.62em;
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--accent);
-    width: 170px;
-    padding-right: 24px;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
   }
 
-  .interest-table td:last-child {
+  .interest-col-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .interest-col-body span {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05em;
+    font-size: 0.95em;
     font-style: italic;
     color: var(--muted);
+    line-height: 2.1;
   }
 
   /* Bio */
@@ -274,7 +269,7 @@
     .wrapper { padding: 56px 28px 80px; }
     .name { font-size: 2.8em; }
     .bio p { font-size: 1.1em; }
-    .interest-table td:first-child { width: 110px; }
+    .interest-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   }
 
 
@@ -319,28 +314,46 @@
 
   <div class="rule"></div>
 
-  <table class="interest-table">
-    <tr>
-      <td>Organisations</td>
-      <td>strategy · governance · leadership</td>
-    </tr>
-    <tr>
-      <td>Philosophy</td>
-      <td>epistemology · phenomenology · ethics</td>
-    </tr>
-    <tr>
-      <td>Data</td>
-      <td>data engineering · data science · solution architecture</td>
-    </tr>
-    <tr>
-      <td>AI</td>
-      <td>artificial intelligence · large language models</td>
-    </tr>
-    <tr>
-      <td>Arts</td>
-      <td>photography · creative writing</td>
-    </tr>
-  </table>
+  <div class="interest-grid">
+    <div class="interest-col">
+      <div class="interest-col-head">Organisations</div>
+      <div class="interest-col-body">
+        <span>strategy</span>
+        <span>governance</span>
+        <span>leadership</span>
+      </div>
+    </div>
+    <div class="interest-col">
+      <div class="interest-col-head">Philosophy</div>
+      <div class="interest-col-body">
+        <span>epistemology</span>
+        <span>phenomenology</span>
+        <span>ethics</span>
+      </div>
+    </div>
+    <div class="interest-col">
+      <div class="interest-col-head">Data</div>
+      <div class="interest-col-body">
+        <span>data engineering</span>
+        <span>data science</span>
+        <span>solution architecture</span>
+      </div>
+    </div>
+    <div class="interest-col">
+      <div class="interest-col-head">AI</div>
+      <div class="interest-col-body">
+        <span>artificial intelligence</span>
+        <span>large language models</span>
+      </div>
+    </div>
+    <div class="interest-col">
+      <div class="interest-col-head">Arts</div>
+      <div class="interest-col-body">
+        <span>photography</span>
+        <span>creative writing</span>
+      </div>
+    </div>
+  </div>
 
   <div class="section">
     <p class="section-label">Advisory services</p>
@@ -394,9 +407,19 @@
 
   <div class="section">
     <p class="section-label">Family</p>
-    <p class="about-text">Canberra, Australia — husband of one, father of three, attending <a href="https://www.westonmolonglo.church">St Peter's Anglican Church Weston Molonglo</a>.</p>
+    <p class="about-text">Canberra, Australia—husband of one, father of three, attending <a href="https://www.westonmolonglo.church">St Peter's Anglican Church Weston Molonglo</a>.</p>
   </div>
 
   <div class="section">
     <p class="section-label">Contact</p>
-    <a class="contact-link" href="/cdn-cgi/l/email-protection#e088858c8c8fa08d81949488898193978f8e87ce8d85"><span class="__cf_email__" data-cfemail="38505d5454577855594c4c50515
+    <a class="contact-link" href="mailto:hello@matthiaswong.me">hello@matthiaswong.me</a>
+  </div>
+
+  <footer>
+    <p>© Matthias Wong</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
