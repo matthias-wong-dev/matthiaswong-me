@@ -114,7 +114,7 @@
   /* Links */
   .link-row {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 14px;
     padding: 14px 0;
     border-bottom: 1px solid var(--rule);
@@ -122,6 +122,18 @@
 
   .link-row:first-of-type {
     border-top: 1px solid var(--rule);
+  }
+
+  .link-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    opacity: 0.45;
+    transition: opacity 0.2s;
+  }
+
+  .link-row:hover .link-icon {
+    opacity: 0.85;
   }
 
   .link-row a {
@@ -215,17 +227,25 @@
   <div class="rule"></div>
 
   <div class="bio">
-    <p>Architect and advisor working on organisational learning, artificial intelligence, and complex data systems.</p>
+    <p>Architect and advisor working on artificial intelligence, organisational learning, and complex data systems.</p>
     <p>Working at a cross-section of organisation management, leadership, philosophy, data science and engineering, and AI. My method is characterised by rigorous theoretical thinking, while grounded in real-world practices in large and complex organisations.</p>
   </div>
 
   <div class="section">
     <p class="section-label">Writing</p>
     <div class="link-row">
+      <!-- Pen/document icon for This Fairyland -->
+      <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+      </svg>
       <a href="https://thisfairyland.land">This Fairyland</a>
       <span class="link-note">essays and exploratory writing</span>
     </div>
     <div class="link-row">
+      <!-- SSRN icon — academic paper stacks -->
+      <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+      </svg>
       <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=10008096">SSRN Profile</a>
       <span class="link-note">academic papers and manuscripts</span>
     </div>
@@ -234,9 +254,17 @@
   <div class="section">
     <p class="section-label">Social</p>
     <div class="link-row">
+      <!-- LinkedIn icon -->
+      <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+      </svg>
       <a href="https://www.linkedin.com/in/dr-matthias-wong-9195263a9">LinkedIn</a>
     </div>
     <div class="link-row">
+      <!-- Instagram icon -->
+      <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
       <a href="https://www.instagram.com/matthias.light">Instagram</a>
       <span class="link-note">matthias.light</span>
     </div>
@@ -244,14 +272,4 @@
 
   <div class="section">
     <p class="section-label">Contact</p>
-    <a class="contact-link" href="mailto:hello@matthiaswong.me">hello@matthiaswong.me</a>
-  </div>
-
-  <footer>
-    <p>© Matthias Wong</p>
-  </footer>
-
-</div>
-
-</body>
-</html>
+    <a class="contact-link" href="/cdn-cgi/l/email-protection#b4c3dbc6dff4d9d5c0c0dcddd5c7c3dbdad39ad9d1"><span class="__cf_email__" data-cfemail="bacdd5c8d1fad7dbceced2d3dbc
