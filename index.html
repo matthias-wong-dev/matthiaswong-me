@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matthias Wong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+  :root {
+    --ink: #1a1814;
+    --muted: #7a7268;
+    --warm-bg: #f5f0e8;
+    --cream: #faf7f2;
+    --accent: #8b6f4e;
+    --rule: #d4c9b8;
+    --hover: #5a3e28;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+  }
+
+  /* Decorative left bar */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--accent), transparent 80%);
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 80px 40px 100px;
+  }
+
+  /* Header */
+  .header {
+    margin-bottom: 56px;
+    animation: fadeUp 0.7s ease both;
+  }
+
+  .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.6em;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    color: var(--ink);
+  }
+
+  .credential {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72em;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* Divider */
+  .rule {
+    width: 48px;
+    height: 1px;
+    background: var(--accent);
+    margin: 32px 0;
+    animation: fadeUp 0.7s 0.15s ease both;
+  }
+
+  /* Bio text */
+  .bio {
+    animation: fadeUp 0.7s 0.25s ease both;
+  }
+
+  .bio p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25em;
+    line-height: 1.75;
+    color: #3a3530;
+    margin-bottom: 1em;
+  }
+
+  .bio p:last-child { margin-bottom: 0; }
+
+  /* Sections */
+  .section {
+    margin-top: 56px;
+    animation: fadeUp 0.7s 0.35s ease both;
+  }
+
+  .section-label {
+    font-size: 0.68em;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  /* Links */
+  .link-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .link-row:first-of-type {
+    border-top: 1px solid var(--rule);
+  }
+
+  .link-row a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15em;
+    font-weight: 400;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .link-row a:hover {
+    color: var(--accent);
+  }
+
+  .link-note {
+    font-size: 0.8em;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* Arrow decoration on links */
+  .link-row a::after {
+    content: ' →';
+    font-style: normal;
+    font-size: 0.85em;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    display: inline-block;
+    transform: translateX(-4px);
+  }
+
+  .link-row a:hover::after {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+
+  /* Contact */
+  .contact-link {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15em;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .contact-link:hover {
+    color: var(--accent);
+    border-color: transparent;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    animation: fadeUp 0.7s 0.45s ease both;
+  }
+
+  footer p {
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 540px) {
+    .wrapper { padding: 56px 28px 80px; }
+    .name { font-size: 2.8em; }
+    .bio p { font-size: 1.1em; }
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <header class="header">
+    <h1 class="name">Matthias Wong</h1>
+    <span class="credential">PhD Mathematics</span>
+  </header>
+
+  <div class="rule"></div>
+
+  <div class="bio">
+    <p>Architect and advisor working on organisational learning, artificial intelligence, and complex data systems.</p>
+    <p>Working at a cross-section of organisation management, leadership, philosophy, data science and engineering, and AI. My method is characterised by rigorous theoretical thinking, while grounded in real-world practices in large and complex organisations.</p>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Writing</p>
+    <div class="link-row">
+      <a href="https://thisfairyland.land">This Fairyland</a>
+      <span class="link-note">essays and exploratory writing</span>
+    </div>
+    <div class="link-row">
+      <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=10008096">SSRN Profile</a>
+      <span class="link-note">academic papers and manuscripts</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Social</p>
+    <div class="link-row">
+      <a href="https://www.linkedin.com/in/dr-matthias-wong-9195263a9">LinkedIn</a>
+    </div>
+    <div class="link-row">
+      <a href="https://www.instagram.com/matthias.light">Instagram</a>
+      <span class="link-note">matthias.light</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Contact</p>
+    <a class="contact-link" href="mailto:hello@matthiaswong.me">hello@matthiaswong.me</a>
+  </div>
+
+  <footer>
+    <p>© Matthias Wong</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
