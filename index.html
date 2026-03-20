@@ -4,7 +4,7 @@
 <head>
 <!-- Open Graph / Social Preview -->
 <meta property="og:title" content="Matthias Wong" />
-<meta property="og:description" content="Advisor on complex organisations adopting data and artificial intelligence capabilities." />
+<meta property="og:description" content="Philosophy | Organisations | Data | Artificial Intelligence | Arts" />
 <meta property="og:url" content="https://matthiaswong.me" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://matthiaswong.me/assets/monogram.png" />
@@ -55,11 +55,10 @@
 
   /* Header */
   .header {
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     animation: fadeUp 0.7s ease both;
     text-align: center;
   }
-
 
   .name {
     font-family: 'Cormorant Garamond', serif;
@@ -81,16 +80,20 @@
     color: var(--accent);
   }
 
-  .byline {
-    margin-top: 12px;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.72em;
-    font-weight: 400;
-    letter-spacing: 0.14em;
-    color: var(--muted);
+  /* Bio */
+  .bio {
+    animation: fadeUp 0.7s 0.15s ease both;
   }
 
-  .byline-sep { margin: 0 8px; opacity: 0.4; }
+  .bio p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25em;
+    line-height: 1.75;
+    color: #3a3530;
+    margin-bottom: 1em;
+  }
+
+  .bio p:last-child { margin-bottom: 0; }
 
   /* Interest grid */
   .interest-grid {
@@ -124,21 +127,6 @@
     color: var(--muted);
     line-height: 2.1;
   }
-
-  /* Bio */
-  .bio {
-    animation: fadeUp 0.7s 0.3s ease both;
-  }
-
-  .bio p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25em;
-    line-height: 1.75;
-    color: #3a3530;
-    margin-bottom: 1em;
-  }
-
-  .bio p:last-child { margin-bottom: 0; }
 
   /* Sections */
   .section {
@@ -208,10 +196,37 @@
     transform: translateX(2px);
   }
 
+  /* Social row */
+  .social-row {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15em;
+    font-weight: 400;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .social-link svg {
+    opacity: 0.5;
+    flex-shrink: 0;
+    margin-top: 3px;
+    transition: opacity 0.2s;
+  }
+
+  .social-link:hover { color: var(--accent); }
+  .social-link:hover svg { opacity: 1; }
+
   @media (max-width: 540px) {
-    .social-row {
-      flex-direction: column;
-    }
+    .social-row { flex-direction: column; }
   }
 
   /* Influences */
@@ -222,7 +237,7 @@
     color: #3a3530;
   }
 
-  /* Family */
+  /* Family / about */
   .about-text {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1em;
@@ -284,33 +299,6 @@
     .interest-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   }
 
-
-  /* Social row */
-  .social-row {
-    display: flex;
-    gap: 32px;
-  }
-
-  .social-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15em;
-    font-weight: 400;
-    color: var(--ink);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .social-link svg {
-    opacity: 0.5;
-    transition: opacity 0.2s;
-  }
-
-  .social-link:hover { color: var(--accent); }
-  .social-link:hover svg { opacity: 1; }
-
 </style>
 </head>
 
@@ -319,91 +307,97 @@
 <div class="wrapper">
 
   <header class="header">
-<img src="assets/monogram_transparent.png" alt="MW" style="width: 100px; margin: 0 auto 24px; display: block;">
+    <img src="assets/monogram_transparent.png" alt="MW" style="width: 100px; margin: 0 auto 24px; display: block;">
     <h1 class="name">Matthias Wong</h1>
     <span class="credential">PhD Mathematics</span>
   </header>
 
-  <div class="rule"></div>
+  <div class="bio">
+    <p>Matthias Wong lives in Canberra with his family of five.</p>
+    <p>Much of his thinking returns to how people understand and act in complex environments—what they see, what they do not see, and how that shapes decisions.</p>
+    <p>While he specialises in organisations, data, and artificial intelligence—often in roles that involve building systems and leading technical teams—his work keeps leading him back to philosophy.</p>
+    <p>In his spare time, he enjoys writing and photography.</p>
+  </div>
 
-  <div class="interest-grid">
-    <div class="interest-col">
-      <div class="interest-col-head">Organisations</div>
-      <div class="interest-col-body">
-        <span>strategy</span>
-        <span>governance</span>
-        <span>leadership</span>
+  <div class="section">
+    <div class="interest-grid">
+      <div class="interest-col">
+        <div class="interest-col-head">Philosophy</div>
+        <div class="interest-col-body">
+          <span>epistemology</span>
+          <span>phenomenology</span>
+          <span>ethics</span>
+        </div>
       </div>
-    </div>
-    <div class="interest-col">
-      <div class="interest-col-head">Philosophy</div>
-      <div class="interest-col-body">
-        <span>epistemology</span>
-        <span>phenomenology</span>
-        <span>ethics</span>
+      <div class="interest-col">
+        <div class="interest-col-head">Organisations</div>
+        <div class="interest-col-body">
+          <span>strategy</span>
+          <span>governance</span>
+          <span>leadership</span>
+        </div>
       </div>
-    </div>
-    <div class="interest-col">
-      <div class="interest-col-head">Data</div>
-      <div class="interest-col-body">
-        <span>architecture</span>
-        <span>engineering</span>
-        <span>science</span>
+      <div class="interest-col">
+        <div class="interest-col-head">Data</div>
+        <div class="interest-col-body">
+          <span>architecture</span>
+          <span>engineering</span>
+          <span>science</span>
+        </div>
       </div>
-    </div>
-    <div class="interest-col">
-      <div class="interest-col-head">AI</div>
-      <div class="interest-col-body">
-        <span>machine learning</span>
-        <span>language models</span>
+      <div class="interest-col">
+        <div class="interest-col-head">AI</div>
+        <div class="interest-col-body">
+          <span>machine learning</span>
+          <span>language models</span>
+        </div>
       </div>
-    </div>
-    <div class="interest-col">
-      <div class="interest-col-head">Arts</div>
-      <div class="interest-col-body">
-        <span>photography</span>
-        <span>creative writing</span>
+      <div class="interest-col">
+        <div class="interest-col-head">Arts</div>
+        <div class="interest-col-body">
+          <span>creative writing</span>
+          <span>photography</span>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <p class="section-label">Advisory services</p>
-        <div class="bio">
-          <p>Architect and technical leader with hands-on experience building and leading data capability in the public sector.</p>
-          <p>Specialising in de-risking and accelerating data transformation initiatives in complex organisations.</p>
-          <p>Designed enterprise data platforms, architecture standards and analytics capabilities recognised by national audits.</p>
-        </div>
+    <p class="section-label">Work</p>
+    <div class="bio">
+      <p>Matthias works as an architect and advisor, with hands-on experience building and leading data capability in the public sector.</p>
+      <p>He specialises in de-risking large transformation programs before they begin, diagnosing misalignment in existing structures, and accelerating data and AI initiatives.</p>
+    </div>
   </div>
 
   <div class="section">
     <p class="section-label">Writing</p>
     <div class="social-row">
-      <a class="social-link" href="https://thisfairyland.land" title="This Fairyland">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
-          <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
-        </svg>
-        <span>thisfairyland.land</span>
-      </a>
       <a class="social-link" href="https://murdochnotes.com" title="Murdoch Notes">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
           <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
         </svg>
         <span>murdochnotes.com</span>
       </a>
+      <a class="social-link" href="https://thisfairyland.land" title="This Fairyland">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+          <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        </svg>
+        <span>thisfairyland.land</span>
+      </a>
       <a class="social-link" href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=10008096" title="SSRN">
-          <svg viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" xmlns="http://www.w3.org/2000/svg" style="margin-top: 3px; flex-shrink: 0;">
-            <g transform="rotate(45 12 12)">
-              <circle cx="12" cy="12" r="2.5"/>
-              <circle cx="12" cy="4" r="1.5"/>
-              <circle cx="4.5" cy="17" r="1.5"/>
-              <circle cx="19.5" cy="17" r="1.5"/>
-              <line x1="12" y1="9.5" x2="12" y2="5.5"/>
-              <line x1="10.8" y1="14" x2="5.7" y2="15.8"/>
-              <line x1="13.2" y1="14" x2="18.3" y2="15.8"/>
-            </g>
-          </svg>
-        <span>Social Science Research Network (SSRN)</span>
+        <svg viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+          <g transform="rotate(45 12 12)">
+            <circle cx="12" cy="12" r="2.5"/>
+            <circle cx="12" cy="4" r="1.5"/>
+            <circle cx="4.5" cy="17" r="1.5"/>
+            <circle cx="19.5" cy="17" r="1.5"/>
+            <line x1="12" y1="9.5" x2="12" y2="5.5"/>
+            <line x1="10.8" y1="14" x2="5.7" y2="15.8"/>
+            <line x1="13.2" y1="14" x2="18.3" y2="15.8"/>
+          </g>
+        </svg>
+        <span>SSRN</span>
       </a>
     </div>
   </div>
@@ -433,9 +427,7 @@
 
   <div class="section">
     <p class="section-label">Family</p>
-    <p class="about-text">Canberra, Australia—husband of one, father of three, attending <a href="https://www.westonmolonglo.church">St Peter's Anglican Church Weston Molonglo</a>.</p>
-  </div>
-
+    <p class="about-text">Canberra, Australia—husband and father of three, attending <a href="https://www.westonmolonglo.church">St Peter's Anglican Church Weston Molonglo</a>.</p>  </div>
   <div class="section">
     <p class="section-label">Contact</p>
     <a class="contact-link" href="mailto:hello@matthiaswong.me">hello@matthiaswong.me</a>
