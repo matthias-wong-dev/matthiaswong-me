@@ -15,7 +15,6 @@
 <link rel="canonical" href="https://matthiaswong.me/">
 <title>Matthias Wong</title>
 
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -219,7 +218,7 @@
     transform: translateX(2px);
   }
 
-  /* Social row */
+  /* Writing social row */
   .social-row {
     display: flex;
     gap: 32px;
@@ -230,26 +229,44 @@
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15em;
-    font-weight: 400;
-    color: var(--ink);
     text-decoration: none;
+    color: var(--ink);
     transition: color 0.2s;
   }
 
   .social-link svg {
     opacity: 0.5;
     flex-shrink: 0;
-    margin-top: 3px;
+    margin-top: 4px;
     transition: opacity 0.2s;
   }
 
   .social-link:hover { color: var(--accent); }
   .social-link:hover svg { opacity: 1; }
 
+  .social-link-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .social-link-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15em;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .social-link-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.92em;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
   @media (max-width: 540px) {
-    .social-row { flex-direction: column; }
+    .social-row { flex-direction: column; gap: 20px; }
   }
 
   /* Influences */
@@ -398,19 +415,25 @@
     <p class="section-label">Writing</p>
     <div class="social-row">
       <a class="social-link" href="https://irisnotes.com" title="Iris Notes">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
           <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
         </svg>
-        <span>irisnotes.com</span>
+        <div class="social-link-text">
+          <span class="social-link-name">irisnotes.com</span>
+          <span class="social-link-desc">Field observations of complex systems</span>
+        </div>
       </a>
       <a class="social-link" href="https://thisfairyland.land" title="This Fairyland">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
           <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
         </svg>
-        <span>thisfairyland.land</span>
+        <div class="social-link-text">
+          <span class="social-link-name">thisfairyland.land</span>
+          <span class="social-link-desc">A not-so-ordinary world</span>
+        </div>
       </a>
       <a class="social-link" href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=10008096" title="SSRN">
-        <svg viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
           <g transform="rotate(45 12 12)">
             <circle cx="12" cy="12" r="2.5"/>
             <circle cx="12" cy="4" r="1.5"/>
@@ -421,7 +444,10 @@
             <line x1="13.2" y1="14" x2="18.3" y2="15.8"/>
           </g>
         </svg>
-        <span>SSRN</span>
+        <div class="social-link-text">
+          <span class="social-link-name">SSRN</span>
+          <span class="social-link-desc">Formal research. Organisations, data, and AI.</span>
+        </div>
       </a>
     </div>
   </div>
@@ -430,16 +456,16 @@
     <p class="section-label">Social</p>
     <div class="social-row">
       <a class="social-link" href="https://www.linkedin.com/in/dr-matthias-wong-9195263a9" title="LinkedIn">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
           <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
         </svg>
-        <span>LinkedIn</span>
+        <span class="social-link-name">LinkedIn</span>
       </a>
       <a class="social-link" href="https://www.instagram.com/matthias.light" title="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
         </svg>
-        <span>matthias.light</span>
+        <span class="social-link-name">matthias.light</span>
       </a>
     </div>
   </div>
